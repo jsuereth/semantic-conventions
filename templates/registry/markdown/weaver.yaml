@@ -11,6 +11,10 @@ templates:
     filter: '.'
     application_mode: single
     file_name: README.md
+  - pattern: entity_all.csv.j2
+    filter: '.groups | map(select(.type == "entity"))'
+    application_mode: single
+    file_name: 'entities/all.csv'
 acronyms:
   - AI
   - AWS

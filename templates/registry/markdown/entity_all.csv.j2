@@ -1,0 +1,6 @@
+entity type, attribute name, role
+{% for g in ctx | sort(attribute='id') -%}
+{% for attr in g.attributes | sort(attribute='name') -%}
+{{g.name}},{{attr.name}},
+{% endfor %}
+{%- endfor %}
